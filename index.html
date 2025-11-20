@@ -1,1 +1,91 @@
+<html>
+<head>
+<title>Codigo Cero</title>
+</head>
+<meta name="description" content="Esta es mi primera página web en HTML, y habla sobre los ordenadores :)">
+<meta name="keywords" content="mi primera página, mi página en html, creación de páginas, computadoras">
 
+
+<body bgcolor="#d6d7c6"><center>
+<center><table width="950"><tr><td>
+
+<img src="imagenes/Captura de pantalla 2025-11-16 125941.png" border="0" alt="logo de la página web">
+
+
+<a href="información.html">
+<img src="menu/Infogmasion.png" border="0" alt="más información"></a>
+<a href="curiosidades.html">
+<img src="menu/Curusiosidades.png" border="0" alt="botón de curiosidades"></a>
+<a href="yo.html">
+<img src="menu/Captura de pantalla 2025-11-16 125743.png" border="0" alt="sobre mi"></a></center>
+
+<center><img src="imagenes/Captura de pantalla 2025-11-16 124805.png" border="0" alt="Imagen banner"></center>
+
+<p>Hola curios@, Esta página web es un proyecto escolar, y ha sido creada con fines educativos, por lo que es una pagina principiante, o más bién de un principiante, espero que aquí encuentres toda la información que necesites. Que la disfrutes!!!</p>
+
+<center><table border="0" width="90%" bgcolor=#fff7db>
+<tr>
+
+<td colspan="2">
+<center><font face="Elephant"><h1><font color="black"><p>Te cuento que...
+</h1></font></center>
+</td>
+
+
+</tr>
+<tr>
+<td><p>Un ordenador es una máquina electrónica programable que procesa datos para convertirlos en información útil. Es capaz de almacenar datos, ejecutar programas, y realizar tareas a gran velocidad y con alta precisión a través de sus componentes de hardware (físicos) y software (programas).</p>
+
+<h2><p><font color="red" face="Verdana">¿Qué son?</font> </h1></p></h2>
+<p>Un ordenador es una máquina electrónica que procesa datos recibidos para convertirlos en información útil, a través de cuatro funciones básicas: entrada, procesamiento, almacenamiento y salida. Los componentes principales son la tarjeta madre, la CPU (procesador), la memoria RAM, la unidad de almacenamiento (SSD o HDD), la GPU (tarjeta gráfica), la fuente de alimentación y periféricos como teclado y monitor.</p>
+
+<td><!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Cambio de imágenes en bucle</title>
+    <style>
+        #imagen {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            transition: opacity 0.5s ease;
+        }
+    </style>
+</head>
+<body>
+
+    <img id="imagen" src="img1.jpg" alt="Imagen">
+
+    <script>
+        const imagenes = [
+            "imagenes/Imagen numero uno.jpg",
+            "imagenes/Imagen numero dos.jpg",
+            "imagenes/Imagen numero tres.jpg",
+            "imagenes/Imagen numero cuatro.jpg"
+        ];
+
+        let indice = 0;
+        const imgElement = document.getElementById("imagen");
+
+        function cambiarImagen() {
+            imgElement.style.opacity = 0;
+
+            setTimeout(() => {
+                indice = (indice + 1) % imagenes.length;
+                imgElement.src = imagenes[indice];
+                imgElement.style.opacity = 1;
+            }, 500);
+        }
+
+        // Cambia cada 2 segundos
+        setInterval(cambiarImagen, 2000);
+    </script>
+
+</body>
+</html></td>
+
+</center>
+</td></tr></table></center>
+</body>
+</html>

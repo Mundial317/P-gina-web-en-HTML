@@ -1,63 +1,15 @@
-<html>
-<head>
-<title>Codigo Cero</title>
-</head>
-<meta name="description" content="Esta es mi primera página web en HTML, y habla sobre los ordenadores :)">
-<meta name="keywords" content="mi primera página, mi página en html, creación de páginas, computadoras">
-
-
-<body bgcolor="#d6d7c6"><center>
-<center><table width="950"><tr><td>
-
-
-<a href="index.html">
-<img src="menu/Infogmasion.png" border="0" alt="más información"></a>
-<a href="nosotros.html">
-<img src="menu/Curusiosidades.png" border="0" alt="botón de curiosidades"></a>
-<a href="servicios.html">
-<img src="menu/Captura de pantalla 2025-11-16 125743.png" border="0" alt="sobre mi"></a></center>
-
-<center><img src="imagenes/WOOOOOOOW.png" border="0" alt="Imagen banner"></center>
-
-<p><h3><p>Y aquí hay más información...</p></h3></p>
-
-<center><table border="0" width="90%" bgcolor=#fff7db>
-<tr>
-
-<td colspan="2">
-<center><font face="Elephant"><h1><font color="black"><p>Te cuento que...
-</h1></font></center>
-</td>
-
-
-</tr>
-<tr>
-<td><p>1️⃣ El primer “bug” fue una polilla</p>
-
-<p>En 1947, un error en un ordenador Mark II fue causado por una polilla atrapada en un relé. Así nació el término bug.</p>
-
-<p>2️⃣ El primer disco duro tenía 5 MB y pesaba una tonelada</p>
-
-<p>El IBM 350 (1956) tenía la capacidad de unas pocas fotos actuales.</p>
-
-<p>3️⃣ ENIAC pesaba 27 toneladas</p>
-
-<p>Uno de los primeros ordenadores electrónicos ocupaba una sala entera y consumía tanta energía como un pequeño pueblo.</p>
-
-<p>4️⃣ El iPhone original superaba a la NASA del Apolo 11</p>
-
-<p>Tenía más potencia de procesamiento que los equipos que llevaron al hombre a la Luna.</p>
-
-<p>5️⃣ El primer videojuego fue Tennis for Two (1958)</p>
-
-<p>Creado para un osciloscopio, apareció mucho antes que Pong.</p>
-
-<td><!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Cambio de imágenes en bucle</title>
+    <title>Codigo Cero</title>
+    <meta name="description" content="Esta es mi primera página web en HTML, y habla sobre los ordenadores :)">
+    <meta name="keywords" content="mi primera página, mi página en html, creación de páginas, computadoras">
+
     <style>
+        body {
+            background-color: #d6d7c6;
+            text-align: center;
+        }
         #imagen {
             width: 300px;
             height: 300px;
@@ -66,41 +18,96 @@
         }
     </style>
 </head>
+
 <body>
 
-    <img id="imagen" src="img1.jpg" alt="Imagen">
+    <table width="950" align="center">
+        <tr>
+            <td>
 
-    <script>
-        const imagenes = [
-            "imagenes/Imagen numero uno.jpg",
-            "imagenes/Imagen numero dos.jpg",
-            "imagenes/Imagen numero tres.jpg",
-            "imagenes/Imagen numero cuatro.jpg"
-        ];
+                <a href="index.html">
+                    <img src="menu/Infogmasion.png" border="0" alt="más información">
+                </a>
+                <a href="nosotros.html">
+                    <img src="menu/Curusiosidades.png" border="0" alt="botón de curiosidades">
+                </a>
+                <a href="servicios.html">
+                    <img src="menu/Captura de pantalla 2025-11-16 125743.png" border="0" alt="sobre mi">
+                </a>
 
-        let indice = 0;
-        const imgElement = document.getElementById("imagen");
+                <br><br>
 
-        function cambiarImagen() {
-            imgElement.style.opacity = 0;
+                <img src="imagenes/WOOOOOOOW.png" border="0" alt="Imagen banner">
 
-            setTimeout(() => {
-                indice = (indice + 1) % imagenes.length;
-                imgElement.src = imagenes[indice];
-                imgElement.style.opacity = 1;
-            }, 500);
-        }
+                <h3>Y aquí hay más información...</h3>
 
-        // Cambia cada 2 segundos
-        setInterval(cambiarImagen, 2000);
-    </script>
+                <table border="0" width="90%" bgcolor="#fff7db" align="center">
+                    <tr>
+                        <td colspan="2">
+                            <h1 style="font-family: Elephant; color: black;">Te cuento que...</h1>
+                        </td>
+                    </tr>
 
-</body>
-</html></td>
+                    <tr>
+                        <td width="50%" valign="top">
 
-</center>
-</td></tr></table></center>
-<a href="index.html">
-<img src="menu/Vover al inico.png" border="0" alt="Volver al inicio"></a>
+                            <p>1️⃣ El primer “bug” fue una polilla</p>
+                            <p>En 1947, un error en un ordenador Mark II fue causado por una polilla atrapada en un relé. Así nació el término bug.</p>
+
+                            <p>2️⃣ El primer disco duro tenía 5 MB y pesaba una tonelada</p>
+                            <p>El IBM 350 (1956) tenía la capacidad de unas pocas fotos actuales.</p>
+
+                            <p>3️⃣ ENIAC pesaba 27 toneladas</p>
+                            <p>Uno de los primeros ordenadores electrónicos ocupaba una sala entera y consumía tanta energía como un pequeño pueblo.</p>
+
+                            <p>4️⃣ El iPhone original superaba a la NASA del Apolo 11</p>
+                            <p>Tenía más potencia de procesamiento que los equipos que llevaron al hombre a la Luna.</p>
+
+                            <p>5️⃣ El primer videojuego fue Tennis for Two (1958)</p>
+                            <p>Creado para un osciloscopio, apareció mucho antes que Pong.</p>
+
+                        </td>
+
+                        <!-- COLUMNA DERECHA: Imagen que cambia -->
+                        <td width="50%" valign="top">
+                            <img id="imagen" src="img1.jpg" alt="Imagen">
+
+                            <script>
+                                const imagenes = [
+                                    "imagenes/Imagen numero uno.jpg",
+                                    "imagenes/Imagen numero dos.jpg",
+                                    "imagenes/Imagen numero tres.jpg",
+                                    "imagenes/Imagen numero cuatro.jpg"
+                                ];
+
+                                let indice = 0;
+                                const imgElement = document.getElementById("imagen");
+
+                                function cambiarImagen() {
+                                    imgElement.style.opacity = 0;
+
+                                    setTimeout(() => {
+                                        indice = (indice + 1) % imagenes.length;
+                                        imgElement.src = imagenes[indice];
+                                        imgElement.style.opacity = 1;
+                                    }, 500);
+                                }
+
+                                setInterval(cambiarImagen, 2000);
+                            </script>
+                        </td>
+                    </tr>
+                </table>
+
+                <br>
+
+                <a href="index.html">
+                    <img src="menu/Vover al inico.png" border="0" alt="Volver al inicio">
+                </a>
+
+            </td>
+        </tr>
+    </table>
+
 </body>
 </html>
